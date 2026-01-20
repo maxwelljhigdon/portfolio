@@ -194,9 +194,15 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
-}
 .linkedin-icon-link {
     font-size: 1.6rem;
     color: inherit;
+    text-decoration: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.linkedin-icon-link:hover {
+    opacity: 0.75;
+    transform: translateY(-1px);
 }
 
