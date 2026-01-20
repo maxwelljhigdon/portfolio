@@ -205,4 +205,25 @@ footer {
     opacity: 0.75;
     transform: translateY(-1px);
 }
+.hero {
+    position: relative;
+}
+
+.linkedin-icon-link {
+    font-size: 1.6rem;
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.linkedin-icon-link:hover {
+    opacity: 0.75;
+    transform: translateY(-1px);
+}
+
+.hero-linkedin {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+}
 
