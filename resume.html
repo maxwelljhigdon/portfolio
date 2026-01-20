@@ -8,41 +8,78 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 <style>
-  /* Additional styles for resume page */
+  /* ===== RESUME PAGE STYLING ===== */
   .resume-container {
     max-width: 800px;
     margin: 60px auto;
-    padding: 0 20px;
+    padding: 2rem;
     background: #ffffff;
     border-radius: 12px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.06);
-    padding:2rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
   }
+
   .resume-container h2, .resume-container h3 {
     color: var(--slate-blue);
+    margin-bottom: 0.5rem;
   }
+
+  .resume-container h3 {
+    margin-top: 1.5rem;
+  }
+
+  .resume-container ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .resume-container p {
+    margin-bottom: 0.8rem;
+  }
+
   .resume-container button {
-    margin-top:1rem;
-    padding:10px 20px;
+    margin-top: 1rem;
+    padding: 10px 20px;
     background: var(--slate-blue);
-    color:white;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-    font-weight:600;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
   }
+
   .resume-container button:hover {
     background: var(--slate-blue-dark);
+  }
+
+  /* ===== PRINT STYLES ===== */
+  @media print {
+    body, html {
+      background: white;
+      color: black;
+    }
+
+    .resume-container {
+      box-shadow: none;
+      border-radius: 0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .resume-container button {
+      display: none; /* hide print button */
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
   }
 </style>
 </head>
 <body>
 
 <section class="resume-container">
-  <h2>Resume</h2>
-
-  <!-- Paste your resume content here -->
-  <p><strong>Maxwell Higdon</strong></p>
+  <h2>Maxwell Higdon</h2>
   <p>Staff Hardware Engineer specializing in CAD, mechanical design, and product development.</p>
 
   <h3>Experience</h3>
