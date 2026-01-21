@@ -136,6 +136,17 @@ a:hover {
   background: white;
   color: var(--slate-blue-dark);
 }
+.btn {
+  outline: none;
+}
+
+.btn:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 3px;
+}
+.btn-outline {
+  border: 2px solid rgba(255, 255, 255, 0.85);
+}
 
 
 /* Hero links */
