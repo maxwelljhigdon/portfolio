@@ -241,4 +241,37 @@ footer {
 .hero {
   position: relative;
 }
+/* ===== SKILLS SECTION ===== */
+#skills {
+  margin-top: 80px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.skills-group {
+  background: var(--card-bg);
+  padding: 1.8rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.skills-group h3 {
+  color: var(--slate-blue);
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.skills-group ul {
+  list-style: disc;
+  margin-left: 1.2rem;
+}
+
+.skills-group li {
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
 
