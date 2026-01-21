@@ -221,3 +221,24 @@ footer {
   .project img { max-width: 100%; }
   .skills-list { flex-direction: column; gap: 0.5rem; }
 }
+/* Minimalist LinkedIn icon top-right in hero */
+.linkedin-icon-link {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-size: 1.8rem;
+  color: #0A66C2; /* LinkedIn blue */
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.linkedin-icon-link:hover {
+  opacity: 0.75;
+  transform: translateY(-2px);
+}
+
+/* Ensure hero has relative positioning for absolute LinkedIn icon */
+.hero {
+  position: relative;
+}
+
