@@ -291,7 +291,7 @@ section {
 
 .project img {
   width: 100%;
-  max-width: 350px;
+  max-width: 400px;
   height: auto;
   border-radius: 8px;
   margin-bottom: 16px;
@@ -300,17 +300,7 @@ section {
   margin-right: auto;
   transition: transform 0.3s ease;
 }
-.project-img-small {
-  max-width: 280px;
-}
 
-.project-img-medium {
-  max-width: 350px;
-}
-
-.project-img-wide {
-  max-width: 520px;
-}
 
 .project:hover img {
   transform: scale(1.03);
