@@ -66,8 +66,9 @@ a:hover {
   position: relative;
   height: 80vh;
   min-height: 520px;
+  z-index: 0;
 
-  background: url("images/header-bg.png") center / cover no-repeat;
+  background: url("images/1a908358-88c7-45a4-9c75-64be190d8488.png") center / cover no-repeat;
   display: flex;
   align-items: center;  /* vertically center content */
   justify-content: center;
@@ -316,6 +317,7 @@ footer {
   color: #0A66C2; /* LinkedIn blue */
   text-decoration: none;
   transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 3;
 }
 
 .linkedin-icon-link:hover {
