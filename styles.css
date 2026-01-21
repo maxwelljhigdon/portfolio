@@ -1,182 +1,223 @@
+/* ===== CSS RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 /* ===== COLOR VARIABLES ===== */
 :root {
-  --slate-blue: #556fb5;      /* main color */
---slate-blue-dark: #3e5390; /* darker variant for hover/borders */
-    --background-light: #f4f7f6;
-    --card-bg: #ffffff;
-    --text-dark: #1e1e1e;
-    --text-muted: #555;
-    --slate-blue: #556fb5;         /* main theme color */
-    --slate-blue-dark: #3e5390;    /* darker variant for hover/borders */
-    --background-light: #f4f7f6;   /* page background */
-    --card-bg: #ffffff;            /* cards and boxes */
-    --text-dark: #1e1e1e;          /* main text */
-    --text-muted: #555;            /* secondary text */
-    --button-hover: #e6eefc;       /* button hover light background */
+  --slate-blue: #556fb5;          /* main color */
+  --slate-blue-dark: #3e5390;     /* hover / borders */
+  --background-light: #f4f7f6;    /* page background */
+  --card-bg: #ffffff;              /* cards, boxes */
+  --text-dark: #1e1e1e;           /* main text */
+  --text-muted: #555;             /* secondary text */
+  --button-hover: #e6eefc;        /* button hover */
 }
 
 /* ===== BASE STYLES ===== */
-@@ -32,7 +33,7 @@ body {
-display: flex;
-flex-direction: column;
-align-items: center;
-    position: relative; /* keep for LinkedIn icon */
-    position: relative; /* for LinkedIn icon positioning if needed */
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--background-light);
+  color: var(--text-dark);
+  line-height: 1.6;
 }
 
-.hero h1 {
-@@ -49,7 +50,7 @@ body {
+h2 {
+  color: var(--slate-blue);
+  margin-bottom: 24px;
+  font-size: 1.8rem;
+}
+
+a {
+  color: var(--slate-blue);
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== HERO ===== */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero {
+  background: linear-gradient(135deg, #556fb5, #3e5390, #7688d0);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.hero h1,
+.hero p,
+.btn,
+.hero-links a {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+}
+
+.hero h1 { animation-delay: 0.2s; }
+.hero-links a { animation-delay: 0.4s; }
+.hero p { animation-delay: 0.6s; }
+.btn { animation-delay: 0.8s; }
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero h1 { font-size: 2.8rem; margin-bottom: 16px; }
+.hero p { font-size: 1.1rem; max-width: 550px; margin-bottom: 32px; line-height: 1.4; }
+
+/* ===== HERO ICON LINKS ===== */
+.hero-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.hero-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  min-width: 60px;
+  min-height: 60px;
+}
+
+.hero-link .icon {
+  font-size: 2rem;
+}
+
+/* LinkedIn official blue */
+.hero-link.linkedin .icon {
+  color: #0A66C2;
+}
+
+/* Resume slate-blue */
+.hero-link.resume .icon {
+  color: var(--slate-blue-dark);
+}
+
+/* Hover effects */
+.hero-link:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.hero-link.linkedin:hover {
+  background: #0A66C2;
+  color: white;
+}
+
+.hero-link.resume:hover {
+  background: var(--slate-blue-dark);
+  color: white;
+}
+
 /* ===== BUTTON ===== */
 .btn {
-background: white;
-    color: var(--slate-blue);
-    color: var(--slate-blue-dark);
-padding: 12px 26px;
-border-radius: 999px;
-text-decoration: none;
-@@ -58,7 +59,7 @@ body {
+  background: linear-gradient(45deg, var(--slate-blue), #7688d0);
+  color: white;
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background: #e6f2ee;
-    background: var(--button-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 /* ===== SECTIONS ===== */
-@@ -111,14 +112,7 @@ a:hover {
-text-decoration: underline;
+section {
+  max-width: 850px;
+  margin: 60px auto;
+  padding: 0 20px;
+  color: var(--text-dark); /* ensures sections are dark text */
+}
+
+/* ===== PROJECTS ===== */
+.project {
+  background: var(--card-bg);
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease;
+}
+
+.project:hover img {
+  transform: scale(1.03);
+}
+
+.project h3 { font-size: 1.3rem; margin-bottom: 8px; }
+.project p { color: var(--text-muted); margin-bottom: 12px; font-size: 0.95rem; line-height: 1.5; }
+
+/* ===== SKILLS ===== */
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skills-list li {
+  background: var(--slate-blue);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
 }
 
 /* ===== FOOTER ===== */
 footer {
-    background: #0f3d2e;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-    margin-top: 100px;
-}
-/* ===== LINK BOXES (Resume, LinkedIn) ===== */
-#links {
-padding: 4rem 1rem;
-display: flex;
-@@ -140,7 +134,11 @@ footer {
-padding: 2.5rem;
-border-radius: 12px;
-transition: transform 0.2s ease, box-shadow 0.2s ease;
-    background: #ffffff;
-    background: var(--card-bg);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  background: var(--slate-blue-dark);
+  color: white;
+  text-align: center;
+  padding: 25px 20px;
+  margin-top: 100px;
 }
 
-.link-box h3 {
-@@ -149,7 +147,7 @@ footer {
-}
-
-.link-box p {
-    color: #555;
-    color: var(--text-muted);
-font-size: 0.95rem;
-}
-
-@@ -158,42 +156,26 @@ footer {
-box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* Optional subtle branding */
-.link-box.linkedin {
-    border-left: 5px solid #0A66C2;
-}
-
-/* Slate-blue branding */
-.link-box.resume {
-    border-left: 5px solid #2E7D32;
-    border-left: 5px solid var(--slate-blue-dark);
-}
-
-/* Mobile responsiveness */
+/* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 600px) {
-    .link-boxes {
-        grid-template-columns: 1fr;
-    }
-}
-/* Icons inside link boxes */
-.icon {
-font-size: 2.5rem;
-margin-bottom: 1rem;
-display: block;
-}
-
-
-.resume .icon {
-    color: #2E7D32;
-}
-.link-box:hover .icon {
-opacity: 0.85;
-}
-.link-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
-/* ===== LinkedIn Minimal Icon ===== */
-.linkedin-icon-link {
-font-size: 1.6rem;
-    color: inherit;
-    color: white; /* visible on hero */
-text-decoration: none;
-transition: opacity 0.2s ease, transform 0.2s ease;
-}
-@@ -202,25 +184,32 @@ footer {
-opacity: 0.75;
-transform: translateY(-1px);
-}
-.hero {
-    position: relative;
-}
-
-.linkedin-icon-link {
-    font-size: 1.6rem;
-/* ===== FOOTER ===== */
-footer {
-    background: var(--slate-blue-dark);
-color: white;
-    text-decoration: none;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.linkedin-icon-link:hover {
-    opacity: 0.75;
-    transform: translateY(-1px);
-    text-align: center;
-    padding: 30px 20px;
-    margin-top: 100px;
-}
-
-.hero-linkedin {
-    position: absolute;
-    top: 24px;
-    right: 24px;
-/* ===== MOBILE RESPONSIVENESS ===== */
-@media (max-width: 600px) {
-    .link-boxes {
-        grid-template-columns: 1fr;
-    }
-    
-    .hero h1 {
-        font-size: 2.4rem;
-    }
-    
-    .hero p {
-        font-size: 1rem;
-    }
-    
-    .btn {
-        padding: 10px 22px;
-        font-size: 0.95rem;
-    }
+  .hero h1 { font-size: 2rem; }
+  .hero p { font-size: 1rem; max-width: 90%; }
+  .btn { padding: 10px 22px; font-size: 0.9rem; }
+  .project img { max-width: 100%; }
+  .skills-list { flex-direction: column; gap: 0.5rem; }
 }
