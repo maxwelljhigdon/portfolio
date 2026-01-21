@@ -55,7 +55,7 @@ a:hover {
   height: 80vh;
   min-height: 520px;
   background:
-    url("images/header-bg.png") center / cover no-repeat;
+    url("images/background.png") center / cover no-repeat;
   background-color: var(--slate-blue-dark);
 
   display: flex;
@@ -299,6 +299,17 @@ section {
   margin-left: auto;
   margin-right: auto;
   transition: transform 0.3s ease;
+}
+.project-img-small {
+  max-width: 280px;
+}
+
+.project-img-medium {
+  max-width: 350px;
+}
+
+.project-img-wide {
+  max-width: 520px;
 }
 
 .project:hover img {
