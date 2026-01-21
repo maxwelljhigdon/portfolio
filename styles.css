@@ -1,98 +1,30 @@
-/* ===== CSS RESET ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* ===== COLOR VARIABLES ===== */
-:root {
-  --slate-blue: #556fb5;          /* main color */
-  --slate-blue-dark: #3e5390;     /* hover / borders */
-  --background-light: #f4f7f6;    /* page background */
-  --card-bg: #ffffff;              /* cards, boxes */
-  --text-dark: #1e1e1e;           /* main text */
-  --text-muted: #555;             /* secondary text */
-  --button-hover: #e6eefc;        /* button hover */
-}
-
-/* ===== BASE STYLES ===== */
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--background-light);
-  color: var(--text-dark);
-  line-height: 1.6;
-}
-
-h2 {
-  color: var(--slate-blue);
-  margin-bottom: 24px;
-  font-size: 1.8rem;
-}
-
-a {
-  color: var(--slate-blue);
-  font-weight: 500;
-  text-decoration: none;
-  transition: 0.2s;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* ===== HERO ===== */
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* ===== HERO HEADER ===== */
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(62, 83, 144, 0.85),
-    rgba(40, 55, 100, 0.85)
-  );
-  z-index: 1;
-}
-
-/* ===== HERO HEADER ===== */
+/* ===== HERO SECTION ===== */
 .hero {
   position: relative;
   height: 80vh;
   min-height: 520px;
-  z-index: 0;
-
   background: url("images/1a908358-88c7-45a4-9c75-64be190d8488.png") center / cover no-repeat;
   display: flex;
-  align-items: center;  /* vertically center content */
-  justify-content: center;
+  align-items: center;        /* vertical centering */
+  justify-content: center;    /* horizontal centering */
   text-align: center;
   color: white;
   overflow: hidden;
+  z-index: 0;
 }
 
 /* Overlay for readability */
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(62, 83, 144, 0.85),
-    rgba(40, 55, 100, 0.85)
-  );
+  background: linear-gradient(135deg, rgba(62,83,144,0.85), rgba(40,55,100,0.85));
   z-index: 1;
 }
 
 /* Content on top of overlay */
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 2;               /* above overlay */
   max-width: 700px;
   padding: 0 20px;
   display: flex;
@@ -139,11 +71,11 @@ a:hover {
   box-shadow: 0 6px 20px rgba(0,0,0,0.2);
 }
 
-/* LinkedIn Icon under buttons */
+/* LinkedIn centered below buttons */
 .linkedin-link {
   margin-top: 1.5rem;
   font-size: 2rem;
-  color: white;
+  color: #0A66C2;  /* LinkedIn official blue */
   text-decoration: none;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
@@ -153,7 +85,7 @@ a:hover {
   opacity: 0.8;
 }
 
-/* ===== MOBILE ===== */
+/* ===== MOBILE HERO ===== */
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 2.2rem;
@@ -166,289 +98,3 @@ a:hover {
     font-size: 0.95rem;
   }
 }
-
-
-
-/* ===== HERO ICON LINKS ===== */
-.hero-links {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin: 2rem 0;
-  flex-wrap: wrap;
-}
-
-.hero-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 1.5rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-  min-width: 60px;
-  min-height: 60px;
-}
-
-.hero-link .icon {
-  font-size: 2rem;
-}
-
-/* LinkedIn official blue */
-.hero-link.linkedin .icon {
-  color: #0A66C2;
-}
-
-/* Resume slate-blue */
-.hero-link.resume .icon {
-  color: var(--slate-blue-dark);
-}
-
-/* Hover effects */
-.hero-link:hover {
-  transform: translateY(-6px) scale(1.05);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-}
-
-.hero-link.linkedin:hover {
-  background: #0A66C2;
-  color: white;
-}
-
-.hero-link.resume:hover {
-  background: var(--slate-blue-dark);
-  color: white;
-}
-
-/* ===== BUTTON ===== */
-.btn {
-  background: linear-gradient(45deg, var(--slate-blue), #7688d0);
-  color: white;
-  padding: 12px 26px;
-  border-radius: 999px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-/* ===== SECTIONS ===== */
-section {
-  max-width: 850px;
-  margin: 60px auto;
-  padding: 0 20px;
-  color: var(--text-dark); /* ensures sections are dark text */
-}
-
-/* ===== PROJECTS ===== */
-.project {
-  background: var(--card-bg);
-  padding: 24px;
-  border-radius: 12px;
-  margin-bottom: 40px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.project img {
-  width: 100%;
-  max-width: 350px;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 16px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  transition: transform 0.3s ease;
-}
-
-.project:hover img {
-  transform: scale(1.03);
-}
-
-.project h3 { font-size: 1.3rem; margin-bottom: 8px; }
-.project p { color: var(--text-muted); margin-bottom: 12px; font-size: 0.95rem; line-height: 1.5; }
-
-/* ===== SKILLS ===== */
-.skills-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.skills-list li {
-  background: var(--slate-blue);
-  color: white;
-  padding: 5px 10px;
-  border-radius: 6px;
-  font-size: 0.9rem;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  background: var(--slate-blue-dark);
-  color: white;
-  text-align: center;
-  padding: 25px 20px;
-  margin-top: 100px;
-}
-
-/* ===== MOBILE RESPONSIVE ===== */
-@media (max-width: 600px) {
-  .hero h1 { font-size: 2rem; }
-  .hero p { font-size: 1rem; max-width: 90%; }
-  .btn { padding: 10px 22px; font-size: 0.9rem; }
-  .project img { max-width: 100%; }
-  .skills-list { flex-direction: column; gap: 0.5rem; }
-}
-/* Minimalist LinkedIn icon top-right in hero */
-.linkedin-icon-link {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  font-size: 1.8rem;
-  color: #0A66C2; /* LinkedIn blue */
-  text-decoration: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  z-index: 3;
-}
-
-.linkedin-icon-link:hover {
-  opacity: 0.75;
-  transform: translateY(-2px);
-}
-
-/* Ensure hero has relative positioning for absolute LinkedIn icon */
-.hero {
-  position: relative;
-}
-/* ===== SKILLS SECTION ===== */
-#skills {
-  margin-top: 80px;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
-}
-
-.skills-group {
-  background: var(--card-bg);
-  padding: 1.8rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-}
-
-.skills-group h3 {
-  color: var(--slate-blue);
-  font-size: 1.1rem;
-  margin-bottom: 0.8rem;
-}
-
-.skills-group ul {
-  list-style: disc;
-  margin-left: 1.2rem;
-}
-
-.skills-group li {
-  margin-bottom: 0.5rem;
-  color: var(--text-dark);
-}
-/* ===== HORIZONTAL TIMELINE ===== */
-#timeline {
-  margin-top: 80px;
-}
-
-.timeline-horizontal {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-top: 60px;
-  padding-top: 40px;
-}
-
-/* Horizontal line */
-.timeline-horizontal::before {
-  content: "";
-  position: absolute;
-  top: 52px;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--slate-blue);
-  opacity: 0.25;
-}
-
-/* Timeline item */
-.timeline-item {
-  position: relative;
-  width: 30%;
-  text-align: center;
-}
-
-/* Dot */
-.timeline-dot {
-  width: 14px;
-  height: 14px;
-  background: var(--slate-blue);
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 10px auto;
-  z-index: 1;
-}
-
-/* Year */
-.timeline-year {
-  display: block;
-  font-weight: 600;
-  color: var(--slate-blue-dark);
-  margin-bottom: 6px;
-}
-
-/* Title */
-.timeline-item h3 {
-  font-size: 1rem;
-  margin-bottom: 4px;
-}
-
-/* Subtitle */
-.timeline-item p {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-}
-
-/* ===== MOBILE STACKING ===== */
-@media (max-width: 768px) {
-  .timeline-horizontal {
-    flex-direction: column;
-    padding-top: 0;
-  }
-
-  .timeline-horizontal::before {
-    display: none;
-  }
-
-  .timeline-item {
-    width: 100%;
-    text-align: left;
-    padding-left: 24px;
-    margin-bottom: 32px;
-  }
-
-  .timeline-dot {
-    position: absolute;
-    left: 0;
-    top: 6px;
-  }
-}
-
-
