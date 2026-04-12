@@ -4,262 +4,327 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Maxwell Higdon | Portfolio</title>
-
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-  /* HIDE PDF HEADER ON WEB */
-  .pdf-header {
-    display: none;
-  }
-
-  /* =========================
-     PRINT / PDF STYLING
-     ========================= */
-  @media print {
-
-    @page {
-      margin: 0.75in;
-    }
-
-    body {
-      font-family: "Inter", sans-serif;
-      color: #111;
-      background: white;
-      line-height: 1.5;
-    }
-
-    /* SHOW PDF HEADER */
-    .pdf-header {
-      display: block;
-      margin-bottom: 30px;
-    }
-
-    .pdf-header h1 {
-      font-size: 28pt;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-
-    .pdf-header p {
-      font-size: 11pt;
-      color: #555;
-      margin: 2px 0;
-    }
-
-    /* REMOVE WEB UI */
-    .hero,
-    .hero-overlay,
-    .hero-buttons,
-    footer,
-    #contact {
-      display: none !important;
-    }
-
-    /* TYPOGRAPHY */
-    h2 {
-      font-size: 16pt;
-      font-weight: 600;
-      margin-top: 40px;
-      margin-bottom: 10px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 4px;
-      letter-spacing: 0.5px;
-    }
-
-    h3 {
-      font-size: 12pt;
-      font-weight: 600;
-      margin-top: 20px;
-      margin-bottom: 4px;
-    }
-
-    p, li {
-      font-size: 10.5pt;
-      color: #333;
-      max-width: 600px;
-    }
-
-    /* LAYOUT CLEANUP */
-    .skills-grid {
-      display: block;
-    }
-
-    .skills-group {
-      margin-bottom: 12px;
-    }
-
-    section {
-      margin-bottom: 30px;
-    }
-
-    /* IMAGES */
-    img {
-      max-width: 100%;
-      margin: 10px 0 20px 0;
-      border-radius: 6px;
-      page-break-inside: avoid;
-    }
-
-    /* CASE STUDIES AS FEATURE PAGES */
-    .case-study {
-      page-break-before: always;
-    }
-
-    .case-study:first-of-type {
-      page-break-before: avoid;
-    }
-
-    /* BULLETS */
-    ul {
-      padding-left: 18px;
-    }
-
-    li {
-      margin-bottom: 4px;
-    }
-
-    /* CONFIDENTIAL BLOCK */
-    .confidential-placeholder {
-      border: 1px solid #ddd;
-      padding: 12px;
-      margin-top: 12px;
-      text-align: center;
-    }
-  }
-  </style>
-
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+ 
 </head>
-
 <body>
 
-<!-- PDF HEADER -->
-<div class="pdf-header">
-  <h1>Maxwell Higdon</h1>
-  <p>Senior Hardware Engineer</p>
-  <p>Mechanical Design • CAD • Product Development</p>
-</div>
-
-<!-- HERO -->
-<header class="hero">
+  <!-- HERO SECTION -->
+ <header class="hero">
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
-    <h1>Maxwell Higdon</h1>
-    <p>
-      Senior Hardware Engineer with a strong foundation in CAD, mechanics, and product design.
-    </p>
+  <h1>Maxwell Higdon</h1>
+  <p>
+    Senior Hardware Engineer with a strong foundation in CAD, mechanics, and product design.
+  </p>
 
-    <div class="hero-buttons">
-      <a href="#projects" class="btn btn-outline">View My Work</a>
-      <a href="resume.html" class="btn btn-outline">View Resume</a>
-      <a href="https://www.linkedin.com/in/maxwell-higdon" target="_blank" class="btn btn-outline">
-        LinkedIn
-      </a>
-    </div>
+  <div class="hero-buttons">
+    <a href="#projects" class="btn btn-outline">View My Work</a>
+    <a href="resume.html" class="btn btn-outline">View Resume</a>
+    <a href="https://www.linkedin.com/in/maxwell-higdon"
+       target="_blank"
+       class="btn btn-outline">
+       <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
   </div>
+</div>
+
 </header>
 
-<!-- ABOUT -->
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    Senior Hardware Engineer specializing in mechanical design, CAD, and product development.
-    Experienced in concept generation, detailed design, tolerance analysis, and manufacturing support.
-  </p>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I’m a Senior Hardware Engineer specializing in mechanical design, CAD, and product development. My experience spans concept generation, detailed design, tolerance analysis, and manufacturing support. I focus on creating robust, manufacturable hardware solutions through close collaboration with electrical, firmware, and manufacturing teams.
+    </p>
+  </section>
+
+<section id="timeline">
+  <h2>Career Timeline</h2>
+
+  <div class="timeline-horizontal">
+    
+    <div class="timeline-item">
+      <span class="timeline-dot"></span>
+      <span class="timeline-year">May, 2021 - August, 2021</span>
+      <h3>Engineering Intern</h3>
+      <p>Cole Garner Geotechnical</p>
+    </div>
+    
+<div class="timeline-item">
+      <span class="timeline-dot"></span>
+      <span class="timeline-year">January, 2023 - June, 2023</span>
+      <h3>Student Intern II, MEP</h3>
+      <p>Olsson</p>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-dot"></span>
+      <span class="timeline-year">July, 2023 - April, 2025</span>
+      <h3>Associate Hardware Engineer</h3>
+      <p>Ricoh USA</p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="timeline-dot"></span>
+      <span class="timeline-year">April, 2025 - Present</span>
+      <h3>Senior Hardware Engineer</h3>
+      <p>Ricoh USA</p>
+    </div>
+
+  </div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills">
+
+
+
+  <!-- SKILLS SECTION -->
+  <section id="skills">
   <h2>Technical Skills</h2>
 
   <div class="skills-grid">
+
     <div class="skills-group">
-      <h3>Mechanical & Hardware</h3>
+      <h3>Mechanical & Hardware Engineering</h3>
       <ul>
-        <li>System-level design</li>
+        <li>System-level mechanical design</li>
         <li>Mechanism design</li>
-        <li>GD&T / tolerance analysis</li>
-        <li>Thermal systems</li>
+        <li>Tolerance analysis & GD&amp;T</li>
+        <li>Sheet metal & machined components</li>
+        <li>Thermal management & cooling systems</li>
+      </ul>
+    </div>
+
+    <div class="skills-group">
+      <h3>Analysis & Validation</h3>
+      <ul>
+        <li>Thermal modeling</li>
+        <li>Failure analysis</li>
+        <li>Design verification & testing</li>
+        <li>Root cause analysis</li>
+      </ul>
+    </div>
+
+    <div class="skills-group">
+      <h3>Manufacturing & Deployment</h3>
+      <ul>
+        <li>Tolerance Analysis & Stack-ups</li>
+        <li>Prototype → Production Transition</li>
+        <li>Vendor collaboration</li>
+        <li>Installation & service documentation</li>
+        <li>Field issue resolution</li>
       </ul>
     </div>
 
     <div class="skills-group">
       <h3>Tools</h3>
       <ul>
-        <li>SolidWorks</li>
-        <li>AutoCAD / Revit</li>
-        <li>Fusion 360</li>
-        <li>Git</li>
+        <li>SolidWorks (production hardware)</li>
+        <li>AutoCAD / Revit (MEP & facilities)</li>
+        <li>Fusion 360 (rapid prototyping)</li>
+        <li>Git (version control)</li>
       </ul>
     </div>
+
+    <div class="skills-group">
+      <h3>Cross-Functional</h3>
+      <ul>
+        <li>Electrical & firmware collaboration</li>
+        <li>Technical leadership</li>
+        <li>Global field support</li>
+        <li>Stakeholder communication</li>
+      </ul>
+    </div>
+
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects">
-  <h2>Project Overview</h2>
 
-  <div class="project">
-    <h3>Wheelchair-Compatible Disc Launcher</h3>
-    <img src="images/Qlplus.png">
-    <p>Assistive device designed for seated operation and accessibility.</p>
+  <!-- PROJECTS SECTION -->
+  <section id="projects">
+    <h2>Project Overview</h2>
+
+    <div class="project">
+      <h3>Wheelchair Compatible Motorized Disc Launcher</h3> 
+      <img src="images/Qlplus.png" alt="CAD model of mechanical assembly" class="project-img-wide">
+      <div class="project-img-wide">
+      </div>
+     
+      <p>A QL+ sponsored project designed and tested using SolidWorks.</p>
+    </div>
+
+    <div class="project">
+      <h3>Ricoh Pro VC80000 Chiller Plumbing System</h3>
+      <img src="images/VC80000.png" alt="Ricoh Pro VC80000" class="project-img-wide">
+      <p>Designed a split-flow external chiller plumbing system to provide reliable printhead cooling across dual printhead units on Ricoh’s flagship continuous-forms inkjet platform.</p>
+    </div>
+    
+ <div class="project">
+      <h3>Ricoh Pro VC40000 Print Head Misting Mitigation Bracket</h3>
+      <img src="images/Vc40.png" alt="Ricoh Pro VC40000">
+      <p>Retrofit hardware deployed across 120+ inkjet systems to protect printhead electronics at production speeds.</p>
+    </div>
+ <div class="project">
+      <h3>Ricoh Pro Z75 Lab Space Integration Study</h3>
+      <img src="images/z75(1).png" alt="Ricoh Pro Z75" class="project-img-wide">
+      <p>Developed a model in AutoCAD LT, integrating within tight existing structural constraints wihthin Ricoh's lab spaces.</p>
+    </div>
+  </section>
+  
+<section id="case-studies">
+  <h2>Case Studies</h2>
+
+  <!-- Flagship -->
+  <div class="case-study flagship">
+    <h3>Main Case Study: Ricoh Pro VC80000 Chiller Plumbing System</h3>
+    <p><strong>Role:</strong> Senior Hardware Engineer | <strong>Tools:</strong> SolidWorks | <strong>Timeline:</strong> 2023–2025</p>
+    <h4>Problem Statement</h4>
+    <p>The Pro VC80000 inkjet printer’s printhead cooling system required external chilling via an SMC chiller, split between two side printhead units. Improper flow or misalignment could lead to overheating, reduced print quality, or service failures.</p>
+    <img src="images/Isoview.png" alt="CAD model of mechanical assembly">
+    <h4>Constraints & Requirements</h4>
+<li>Precise fluid path routing within tight printer frame.</li>
+<li>Minimize downtime and simplify field installation.</li>
+<li>Thermal stability to meet printhead tolerances.</li>
+<li>Vendor components compatibility (SMC chiller).</li>
+    <img src="images/ChillerConfigNew2.png" alt="CAD model of mechanical assembly">
+    <h4>Design Approach</h4>
+<li> Modeled plumbing in AutoCAD for precise spatial layout.</li>
+<li>Used SolidWorks to simulate fittings, routing, and clearances.</li>
+<li>Iterative coordination with firmware/electrical to avoid clashes. </li>
+    <h4>Key Decisions</h4>
+    <li>Routing configuration: Side-by-side split → minimized bends → maintained flow.</li>
+<li>Materials: Selected corrosion-resistant tubing for longevity.</li>
+    <img src="images/OverheadVC80.png" alt="CAD model of mechanical assembly">
+    <h4>Analysis & Validation</h4>
+    <li>Lab tested on pre-production level machines.</li>
+<li>Tolerance stack analysis for alignment with printheads.</li>
+<li>Field verification across multiple printers.</li>
+
+    <h4>Manufacturing & Deployment</h4>
+    <li>Detailed CAD drawings for service technicians.</li>
+<li>Standardized installation guide distributed globally.</li>
+<li>Vendor-reviewed for quality assurance.</li>
+    <h4>Results & Impact</h4>
+    <li>Currently deployed across 10+ Pro VC80000 systems worldwide, with more on the way.</li>
+<li>Increased uptime and consistent print quality.</li>
+    <div class="confidential-placeholder">
+  <div class="confidential-icon">
+    <i class="fas fa-lock"></i>
   </div>
 
-  <div class="project">
-    <h3>Ricoh VC80000 Cooling System</h3>
-    <img src="images/VC80000.png">
-    <p>External chiller system enabling stable printhead cooling.</p>
-  </div>
-</section>
+  <h4>Confidential Project</h4>
 
-<!-- FLAGSHIP CASE STUDY -->
-<section class="case-study">
-  <h2>Ricoh Pro VC80000 Chiller System</h2>
-
-  <p><strong>Role:</strong> Senior Hardware Engineer</p>
-
-  <h3>Problem</h3>
   <p>
-    Printhead cooling required precise external flow control. Failure resulted in overheating and print defects.
+    Detailed implementation visuals are omitted due to confidentiality
+    and intellectual property restrictions.
   </p>
 
-  <h3>Constraints</h3>
-  <ul>
-    <li>Tight routing space</li>
-    <li>Zero downtime install</li>
-    <li>Vendor compatibility</li>
-  </ul>
+  <span class="confidential-note">
+    System-level hardware design
+  </span>
+</div>
 
-  <h3>Solution</h3>
+  </div>
+</section>
+
+
+  
+  <section id="case-studies">
+  <!-- Mini Case Studies -->
+  <div class="case-study flagship">
+    <h3>Mini Case Study: Ricoh Pro VC40000 — Printhead Misting Mitigation</h3>
+    <img src="images/Main Bracket.png" alt="CAD model of mechanical assembly">
+<h4>Context:</h4> <p>High-speed continuous-forms inkjet printer deployed globally.</p> 
+<h4>Problem:</h4> <p>Ink misting accumulated on electronics above the printheads, leading to long-term reliability issues.</p> 
+<h4>Constraint:</h4> <p>Retrofit-only solution with no printer downtime and compatibility across existing field installations.</p>
+<h4>Decision:</h4> <p>Designed a bolt-on misting mitigation bracket using existing mounting features and service access zones.</p>
+<h4>Impact:</h4> <p>Deployed across 120+ printers worldwide, significantly reducing electronics contamination in the field.</p> 
+    <div class="confidential-placeholder">
+  <div class="confidential-icon">
+    <i class="fas fa-lock"></i>
+  </div>
+
+  <h4>Confidential Project</h4>
+
   <p>
-    Designed a split-flow plumbing architecture minimizing flow losses and simplifying installation.
+    Detailed implementation visuals are omitted due to confidentiality
+    and intellectual property restrictions.
   </p>
 
-  <img src="images/Isoview.png">
+  <span class="confidential-note">
+    System-level hardware design
+  </span>
+</div>
 
-  <h3>Impact</h3>
-  <ul>
-    <li>Deployed globally</li>
-    <li>Improved uptime and reliability</li>
-  </ul>
+  </div>
+  </section>
+
+
+
+  
+  <section id="case-studies">
+  <div class="case-study flagship">
+    <h3>Mini Case Study: Ricoh Pro Z75 — Lab Space Integration Study</h3>
+    <img src="images/ProZ75.png" alt="CAD model of mechanical assembly">
+<h4>Context:</h4> <p>Cut-sheet inkjet printer planned for installation in an existing lab environment with multiple large-format machines.</p>
+<h4>Problem:</h4> <p>It was unclear whether the Z75 could be installed without interfering with two existing printers and required service clearances.</p>
+<h4>Constraint:</h4> <p>Layout had to account for fixed room geometry, existing equipment footprints, and required access zones without relocating current machines.</p> 
+<h4>Decision:</h4> <p>Modeled the Z75 and surrounding lab space in AutoCAD LT to evaluate fit, clearances, and service access prior to installation.</p> 
+<h4>Impact:</h4> <p>Enabled confident installation planning, avoiding late-stage layout changes and minimizing disruption to ongoing lab operations.</p>
+    <div class="confidential-placeholder">
+  <div class="confidential-icon">
+    <i class="fas fa-lock"></i>
+  </div>
+
+  <h4>Confidential Project</h4>
+
+  <p>
+    Detailed implementation visuals are omitted due to confidentiality
+    and intellectual property restrictions.
+  </p>
+
+  <span class="confidential-note">
+    System-level hardware design
+  </span>
+</div>
+
+  </div>
+  </section>
+
+
+  
+  <section id="case-studies">
+  <div class="case-study flagship">
+    <h3> Mini Case Study: Wheelchair-Compatible Motorized Disc Launcher</h3>
+    <img src="images/wheelchairexp.png" alt="How it works">
+<h4>Context:</h4> <p>Sponsored assistive-technology project focused on enabling accessible recreational disc launching for wheelchair users.</p>
+<h4>Problem:</h4> <p>Existing disc launchers required standing operation and lacked adjustability for users with limited mobility.</p> 
+<h4>Constraint:</h4> <p>Design had to be operable entirely from a seated position, remain portable, and use safe, readily manufacturable components.</p>
+<h4>Decision:</h4> <p>Designed and prototyped a motorized disc launching mechanism in SolidWorks, iterating on geometry and controls to enable one-handed operation and adjustable launch parameters.</p> 
+<h4>Impact:</h4> <p>Delivered a functional prototype that expanded accessibility for wheelchair users while meeting sponsor performance and safety requirements.</p>
+  </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: maxwelljhigdon@gmail.com</p>
-</section>
 
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 Maxwell Higdon</p>
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: maxwelljhigdon@gmail.com</p>
+    <p>Phone: (303) 728-4914</p>
+  </section>
 
-  <button onclick="window.print()" class="btn btn-outline">
-    Download PDF Portfolio
-  </button>
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Maxwell Higdon</p>
+  </footer>
 
 </body>
 </html>
